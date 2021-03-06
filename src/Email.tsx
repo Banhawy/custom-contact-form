@@ -24,7 +24,7 @@ function Email() {
       />
       {errors.email && errors.email.message}
       {errors.email && errors.email.type === 'required' && (
-        <p>This field is required</p>
+        <p className="error">This field is required</p>
       )}
     </div>
   )

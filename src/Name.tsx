@@ -13,7 +13,7 @@ function Name() {
     <div className='first_name_wrapper'>
       <StyledLabel>Name</StyledLabel>
       <StyledInput name='name' ref={register({ required: true })} />
-      {errors.name && <p>This field is required</p>}
+      {errors.name && <p className="error">This field is required</p>}
     </div>
   )
 }

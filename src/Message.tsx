@@ -18,10 +18,10 @@ function Message() {
         ref={register({ required: true, minLength: 55 })}
       />
       {errors.message && errors.message.type === 'required' && (
-        <p>This field is required</p>
+        <p className="error">This field is required</p>
       )}
       {errors.message && errors.message.type === 'minLength' && (
-        <p>More characters needed!</p>
+        <p className="error">We'd like to hear more. Please elaborate more for the message to be sent.</p>
       )}
     </div>
   )
