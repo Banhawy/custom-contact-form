@@ -29,7 +29,8 @@ export interface Theme {
 
 export interface formProps {
   children?: JSX.Element[] | JSX.Element
-  theme: Theme
+  theme: Theme,
+  onSubmit: (data: any) => any
 }
 
 const defaultTheme = {
@@ -61,9 +62,8 @@ const defaultTheme = {
   buttonHoverColor: 'grey'
 }
 
-function Form({ children, theme }: formProps) {
+function Form({ children, theme, onSubmit }: formProps) {
   const methods = useForm()
-  const onSubmit = (data: Object) => console.log(data)
 
   Object.assign(defaultTheme, theme)
 
